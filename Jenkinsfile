@@ -7,7 +7,7 @@ pipeline {
         stage("Build") {
             steps {
                 script {
-                echo "Hala"
+                echo "Hala from building"
                 bat "npm install"
                 }
             }
