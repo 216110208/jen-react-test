@@ -4,17 +4,25 @@ pipeline {
     // tools { nodejs "node"}
 
     stages {
-        stage("Builde") {
+        stage("Build") {
             steps {
                 script {
                 echo "Hala"
+                bat "npm install"
                 }
             }
         }
          stage("Test") {
             steps {
                 script {
-                echo "Test"
+                echo "Here is the Testing"
+                }
+            }
+        }
+         stage("Deploy") {
+            steps {
+                script {
+                bat "npm start"
                 }
             }
         }
